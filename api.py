@@ -3,7 +3,14 @@ import csv
 from legislators.models import Legislator
 from bills.models import Bill
 
-SUNLIGHT_API_KEY='6b879d65c49742058a88a0b955b3f172'
+try:
+    from grassroots.settings.local import SUNLIGHT_API_KEY
+except ImportError:
+    print('Sunlight API key required. Please obtain an API key from '
+          'https://sunlightfoundation.com/api/accounts/register/ and place it in /grassroots/settings/local.py '
+          '(See /grassroots/settings/local.py.example for an example or consult the wiki for more information).')
+    raise
+
 BASE_API_STR = 'http://congress.api.sunlightfoundation.com/'
 
 def query_api(query, page):
