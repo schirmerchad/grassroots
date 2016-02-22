@@ -1,0 +1,13 @@
+{% load staticfiles %}
+<script src="{% static 'js/profile.css' %}">
+<h1>{{ voter.username }}</h1>
+<div class="headings">
+  Name: <br/>
+  Email: <br/>
+  Zip Code: <br/>
+</div>
+<div class="details">
+  {% '%s %s' % (voter.first_name, voter.last_name) %} <br/>
+  {% '%s' % (voter.email) %} <br/>
+  {% '%s' % (voter.zipcode) %} <br/>
+</div>
