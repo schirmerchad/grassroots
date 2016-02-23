@@ -2,6 +2,11 @@
 {% load sass_tags %}
 <link href="{% sass_src 'css/index.scss' %}" rel="stylesheet" type="text/css" />
 <div id="landing">
+  <div id="user-menu">
+    <ul>
+      <li>Login</li>
+    </ul>
+  </div>
   <h1>Grassroots</h1>
   <p>Find and track your representatives at every level of government.</p>
   <form method="post">
@@ -9,4 +14,13 @@
     {% csrf_token %}
     <input type="text" name="zipcode" id="zipcode" value="{{ zipcode }}" placeholder="Enter zipcode" />
   </form>
+</div>
+<div id="main">
+  <nav>
+    <ul>
+      <li>Municipal</li>
+      <li>State</li>
+      <li>Federal</li>
+    </ul>
+  </nav>
 </div>
