@@ -1,7 +1,12 @@
-<h1>Grassroots</h1>
-<p>Find and track your representatives at the local/municipal level.</p>
-<form action="{% url 'core:enterzip' %}" method="post">
-  {% csrf_token %}
-  <input type="text" name="zipcode" id="zipcode" value="{{ zipcode }}" placeholder="Enter your zipcode" />
-  <input type="submit" value="Find my representatives" />
-</form>
+{% load staticfiles %}
+{% load sass_tags %}
+<link href="{% sass_src 'css/index.scss' %}" rel="stylesheet" type="text/css" />
+<div id="landing">
+  <h1>Grassroots</h1>
+  <p>Find and track your representatives at every level of government.</p>
+  <form method="post">
+    <!-- action=" url 'core:enterzip' "  -->
+    {% csrf_token %}
+    <input type="text" name="zipcode" id="zipcode" value="{{ zipcode }}" placeholder="Enter zipcode" />
+  </form>
+</div>

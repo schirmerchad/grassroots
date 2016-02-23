@@ -1,13 +1,18 @@
 {% load staticfiles %}
-<script src="{% static 'js/profile.css' %}">
+{% load sass_tags %}
+<link href="{% sass_src 'css/profile.scss' %}" rel="stylesheet" type="text/css" />
 <h1>{{ voter.username }}</h1>
 <div class="headings">
-  Name: <br/>
-  Email: <br/>
-  Zip Code: <br/>
+  <ul>
+    <li>Name:</li>
+    <li>Email:</li>
+    <li>Zip Code:</li>
+  </ul>
 </div>
 <div class="details">
-  {% '%s %s' % (voter.first_name, voter.last_name) %} <br/>
-  {% '%s' % (voter.email) %} <br/>
-  {% '%s' % (voter.zipcode) %} <br/>
+  <ul>
+    <li>{% '%s %s' % (voter.first_name, voter.last_name) %}</li>
+    <li>{% '%s' % (voter.email) %}</li>
+    <li>{% '%s' % (voter.zipcode) %}</li>
+  </ul>
 </div>
