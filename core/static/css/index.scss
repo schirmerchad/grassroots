@@ -1,0 +1,204 @@
+* {
+  margin:0;
+  padding:0;
+  font-family: sans-serif;
+  box-sizing: border-box;
+  text-rendering: optimizeLegibility;
+  letter-spacing: -0.1px;
+}
+
+body {
+  background:#f2f2f2;
+}
+
+.unactive {
+  width:100vw;
+  height:100vh;
+  background-color: rgb(106,156,87);
+  background-image: url('../images/map.png');
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: 50% 50%;
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#6a9c57', endColorstr='#007534',GradientType=0 ); /* IE6-9 */
+  color:white;
+  .description {
+    position: absolute;
+    top:50%;
+    left:50%;
+    transform: translate(-50%,-50%);
+    .logo-name {
+      width: 210px;
+      height:27px;
+      img {
+        float:left;
+        width:34px;
+        box-shadow: 0px 2px 0px rgba(0,0,0,0.1);
+        margin:4px 6px 0 0;
+      }
+      h1 {
+        float:left;
+        font-weight: 900;
+        font-size: 24px;
+        text-transform: uppercase;
+        text-shadow: 0px 2px 0px rgba(0,0,0,0.1);
+      }
+    }
+    p {
+      text-shadow: 0px 2px 0px rgba(0,0,0,0.1);
+      font-weight:100;
+      margin: 10px 0;
+      text-align: center;
+      clear:left;
+    }
+    .blinking-cursor {
+      font-weight: 100;
+      font-size: 30px;
+      color: white;
+      -webkit-animation: 1s blink step-end infinite;
+      -moz-animation: 1s blink step-end infinite;
+      -ms-animation: 1s blink step-end infinite;
+      -o-animation: 1s blink step-end infinite;
+      animation: 1s blink step-end infinite;
+    }
+    input {
+      width:150px;
+      height:40px;
+      margin:20px auto;
+      background:none;
+      color:white;
+      border:none;
+      font-size: 16px;
+      font-weight: 100;
+    }
+    button {
+      height:40px;
+      padding: 0 10px;
+      background:none;
+      color:white;
+      font-size:12px;
+      text-transform: uppercase;
+      font-weight: 900;
+      border:0;
+    }
+  }
+  #user-menu {
+    float:right;
+    padding:15px;
+    ul {
+      list-style-type: none;
+      li {
+        font-weight: bold;
+        text-transform: uppercase;
+        font-size:12px;
+        padding:5px 10px 0 0;
+      }
+    }
+  }
+}
+
+.active {
+  width:100vw;
+  height:60px;
+  background-color: rgb(106,156,87);
+  color:white;
+  position: relative;
+  .description {
+    position: absolute;
+    top:50%;
+    left:20px;
+    transform: translateY(-50%);
+    .logo-name {
+      width: 210px;
+
+      img {
+        float:left;
+        width:24px;
+        box-shadow: 0px 2px 0px rgba(0,0,0,0.1);
+        margin:2px 6px 0 0;
+      }
+      h1 {
+        float:left;
+        font-weight: 900;
+        font-size: 16px;
+        text-transform: uppercase;
+        text-shadow: 0px 2px 0px rgba(0,0,0,0.1);
+      }
+    }
+    p {
+      display:none;
+    }
+    form {
+      display:none;
+    }
+  }
+  .header-zip {
+    font-weight: 100;
+    text-align: center;
+    display: block;
+    padding:22px;
+  }
+  #user-menu {
+    float:right;
+    padding:18px;
+    ul {
+      list-style-type: none;
+      li {
+        font-weight: bold;
+        text-transform: uppercase;
+        font-size:12px;
+        padding:5px 10px 0 0;
+      }
+    }
+  }
+}
+
+#main {
+  nav {
+    height:50px;
+    width:600px;
+    margin-top:15px;
+    z-index: 1000;
+    position: absolute;
+    left:50%;
+    transform: translateX(-50%);
+    li {
+      float:left;
+      color:#6A9C57;
+      text-transform: uppercase;
+      font-weight: bold;
+      font-size:13px;
+      width:200px;
+      height:50px;
+      padding:17px 0 0 0;
+      border:1px solid #dddddd;
+      box-shadow:0 1px 0 rgba(255,255,255,0.5);
+      text-align: center;
+      &:first-child {
+        border-right:0;
+        -webkit-border-top-left-radius: 4px;
+        -webkit-border-bottom-left-radius: 4px;
+        -moz-border-radius-topleft: 4px;
+        -moz-border-radius-bottomleft: 4px;
+        border-top-left-radius: 4px;
+        border-bottom-left-radius: 4px;
+      }
+      &:last-child {
+        border-left:0;
+        -webkit-border-top-right-radius: 4px;
+        -webkit-border-bottom-right-radius: 4px;
+        -moz-border-radius-topright: 4px;
+        -moz-border-radius-bottomright: 4px;
+        border-top-right-radius: 4px;
+        border-bottom-right-radius: 4px;
+      }
+      @media screen and (max-width: 500px) {
+        width:33.3333333vw;
+      }
+      &:hover {
+        background:#f9f9f9;
+      }
+    }
+  }
+}
+
+@import 'animations'
