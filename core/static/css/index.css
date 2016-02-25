@@ -1,0 +1,235 @@
+/* line 1, /home/vagrant/grassroots/core/static/css/index.scss */
+* {
+  margin: 0;
+  padding: 0;
+  font-family: sans-serif;
+  box-sizing: border-box;
+  text-rendering: optimizeLegibility;
+  letter-spacing: -0.1px; }
+
+/* line 10, /home/vagrant/grassroots/core/static/css/index.scss */
+body {
+  background: #f2f2f2; }
+
+/* line 14, /home/vagrant/grassroots/core/static/css/index.scss */
+.unactive {
+  width: 100vw;
+  height: 100vh;
+  background-color: #6a9c57;
+  background-image: url("../images/map.png");
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: 50% 50%;
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#6a9c57', endColorstr='#007534',GradientType=0 );
+  /* IE6-9 */
+  color: white; }
+  /* line 24, /home/vagrant/grassroots/core/static/css/index.scss */
+  .unactive .description {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%); }
+    /* line 29, /home/vagrant/grassroots/core/static/css/index.scss */
+    .unactive .description .logo-name {
+      width: 210px;
+      height: 27px; }
+      /* line 32, /home/vagrant/grassroots/core/static/css/index.scss */
+      .unactive .description .logo-name img {
+        float: left;
+        width: 34px;
+        box-shadow: 0px 2px 0px rgba(0, 0, 0, 0.1);
+        margin: 4px 6px 0 0; }
+      /* line 38, /home/vagrant/grassroots/core/static/css/index.scss */
+      .unactive .description .logo-name h1 {
+        float: left;
+        font-weight: 900;
+        font-size: 24px;
+        text-transform: uppercase;
+        text-shadow: 0px 2px 0px rgba(0, 0, 0, 0.1); }
+    /* line 46, /home/vagrant/grassroots/core/static/css/index.scss */
+    .unactive .description p {
+      text-shadow: 0px 2px 0px rgba(0, 0, 0, 0.1);
+      font-weight: 100;
+      margin: 10px 0;
+      text-align: center;
+      clear: left; }
+    /* line 53, /home/vagrant/grassroots/core/static/css/index.scss */
+    .unactive .description .blinking-cursor {
+      font-weight: 100;
+      font-size: 30px;
+      color: white;
+      -webkit-animation: 1s blink step-end infinite;
+      -moz-animation: 1s blink step-end infinite;
+      -ms-animation: 1s blink step-end infinite;
+      -o-animation: 1s blink step-end infinite;
+      animation: 1s blink step-end infinite; }
+    /* line 63, /home/vagrant/grassroots/core/static/css/index.scss */
+    .unactive .description input {
+      width: 150px;
+      height: 40px;
+      margin: 20px auto;
+      background: none;
+      color: white;
+      border: none;
+      font-size: 16px;
+      font-weight: 100; }
+    /* line 73, /home/vagrant/grassroots/core/static/css/index.scss */
+    .unactive .description button {
+      height: 40px;
+      padding: 0 10px;
+      background: none;
+      color: white;
+      font-size: 12px;
+      text-transform: uppercase;
+      font-weight: 900;
+      border: 0; }
+  /* line 84, /home/vagrant/grassroots/core/static/css/index.scss */
+  .unactive #user-menu {
+    float: right;
+    padding: 15px; }
+    /* line 87, /home/vagrant/grassroots/core/static/css/index.scss */
+    .unactive #user-menu ul {
+      list-style-type: none; }
+      /* line 89, /home/vagrant/grassroots/core/static/css/index.scss */
+      .unactive #user-menu ul li {
+        font-weight: bold;
+        text-transform: uppercase;
+        font-size: 12px;
+        padding: 5px 10px 0 0; }
+
+/* line 99, /home/vagrant/grassroots/core/static/css/index.scss */
+.active {
+  width: 100vw;
+  height: 60px;
+  background-color: #6a9c57;
+  color: white;
+  position: relative; }
+  /* line 105, /home/vagrant/grassroots/core/static/css/index.scss */
+  .active .description {
+    position: absolute;
+    top: 50%;
+    left: 20px;
+    transform: translateY(-50%); }
+    /* line 110, /home/vagrant/grassroots/core/static/css/index.scss */
+    .active .description .logo-name {
+      width: 210px; }
+      /* line 113, /home/vagrant/grassroots/core/static/css/index.scss */
+      .active .description .logo-name img {
+        float: left;
+        width: 24px;
+        box-shadow: 0px 2px 0px rgba(0, 0, 0, 0.1);
+        margin: 2px 6px 0 0; }
+      /* line 119, /home/vagrant/grassroots/core/static/css/index.scss */
+      .active .description .logo-name h1 {
+        float: left;
+        font-weight: 900;
+        font-size: 16px;
+        text-transform: uppercase;
+        text-shadow: 0px 2px 0px rgba(0, 0, 0, 0.1); }
+    /* line 127, /home/vagrant/grassroots/core/static/css/index.scss */
+    .active .description p {
+      display: none; }
+    /* line 130, /home/vagrant/grassroots/core/static/css/index.scss */
+    .active .description form {
+      display: none; }
+  /* line 134, /home/vagrant/grassroots/core/static/css/index.scss */
+  .active .header-zip {
+    font-weight: 100;
+    text-align: center;
+    display: block;
+    padding: 22px; }
+  /* line 140, /home/vagrant/grassroots/core/static/css/index.scss */
+  .active #user-menu {
+    float: right;
+    padding: 18px; }
+    /* line 143, /home/vagrant/grassroots/core/static/css/index.scss */
+    .active #user-menu ul {
+      list-style-type: none; }
+      /* line 145, /home/vagrant/grassroots/core/static/css/index.scss */
+      .active #user-menu ul li {
+        font-weight: bold;
+        text-transform: uppercase;
+        font-size: 12px;
+        padding: 5px 10px 0 0; }
+
+/* line 156, /home/vagrant/grassroots/core/static/css/index.scss */
+#main nav {
+  height: 50px;
+  width: 600px;
+  margin-top: 15px;
+  z-index: 1000;
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%); }
+  /* line 164, /home/vagrant/grassroots/core/static/css/index.scss */
+  #main nav li {
+    float: left;
+    color: #6A9C57;
+    text-transform: uppercase;
+    font-weight: bold;
+    font-size: 13px;
+    width: 200px;
+    height: 50px;
+    padding: 17px 0 0 0;
+    border: 1px solid #dddddd;
+    box-shadow: 0 1px 0 rgba(255, 255, 255, 0.5);
+    text-align: center; }
+    /* line 176, /home/vagrant/grassroots/core/static/css/index.scss */
+    #main nav li:first-child {
+      border-right: 0;
+      -webkit-border-top-left-radius: 4px;
+      -webkit-border-bottom-left-radius: 4px;
+      -moz-border-radius-topleft: 4px;
+      -moz-border-radius-bottomleft: 4px;
+      border-top-left-radius: 4px;
+      border-bottom-left-radius: 4px; }
+    /* line 185, /home/vagrant/grassroots/core/static/css/index.scss */
+    #main nav li:last-child {
+      border-left: 0;
+      -webkit-border-top-right-radius: 4px;
+      -webkit-border-bottom-right-radius: 4px;
+      -moz-border-radius-topright: 4px;
+      -moz-border-radius-bottomright: 4px;
+      border-top-right-radius: 4px;
+      border-bottom-right-radius: 4px; }
+    @media screen and (max-width: 500px) {
+      /* line 164, /home/vagrant/grassroots/core/static/css/index.scss */
+      #main nav li {
+        width: 33.3333333vw; } }
+    /* line 197, /home/vagrant/grassroots/core/static/css/index.scss */
+    #main nav li:hover {
+      background: #f9f9f9; }
+
+@keyframes "blink" {
+  from, to {
+    color: transparent; }
+  50% {
+    color: white; } }
+
+@-moz-keyframes blink {
+  from, to {
+    color: transparent; }
+  50% {
+    color: white; } }
+
+@-webkit-keyframes "blink" {
+  from, to {
+    color: transparent; }
+  50% {
+    color: white; } }
+
+@-ms-keyframes "blink" {
+  /* line 29, /home/vagrant/grassroots/core/static/css/_animations.scss */
+  from, to {
+    color: transparent; }
+  /* line 32, /home/vagrant/grassroots/core/static/css/_animations.scss */
+  50% {
+    color: white; } }
+
+@-o-keyframes "blink" {
+  from, to {
+    color: transparent; }
+  50% {
+    color: white; } }
+
+/*# sourceMappingURL=../../../../../../static/css/index.css.map */

@@ -1,0 +1,33 @@
+{% load staticfiles %}
+{% load sass_tags %}
+<link href="{% sass_src 'css/index.scss' %}" rel="stylesheet" type="text/css" />
+<script src="{% static 'js/index.js' %}"></script>
+<div id="landing" class="unactive">
+  <div id="user-menu">
+    <ul>
+      <li>Login</li>
+    </ul>
+  </div>
+  <div class="description">
+    <div class="logo-name">
+      <img src="{% static 'images/flag-logo.svg' %}" />
+      <h1>Grassroots</h1>
+    </div>
+    <p>Find and track your representatives at every level of government.</p>
+    <form method="post">
+      <!-- action=" url 'core:enterzip' "  -->
+      {% csrf_token %}
+      <span class="blinking-cursor">|</span>
+      <input type="text" onload="focusonthis" onkeypress="zipup()" name="zipcode" id="zipcode" value="{{ zipcode }}" placeholder="Enter zipcode" />
+    </form>
+  </div>
+</div>
+<div id="main">
+  <nav>
+    <ul>
+      <li>Municipal</li>
+      <li>State</li>
+      <li>Federal</li>
+    </ul>
+  </nav>
+</div>
